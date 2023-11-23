@@ -13,7 +13,6 @@ current_url = ''
 
 
 def draw(item, submenu='', par=False):
-    print(item.url + '/', current_url)
     str = f"<ul><li class={'active' if item.url + '/' == current_url else ''}><a href=/{item.menu_name}>{item.menu_name}</a>{submenu}</li></ul>"
     if item.parent and par:
         return draw(item.parent, str)
